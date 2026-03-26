@@ -1,7 +1,7 @@
 const int MAXN = 2e5 + 5;
 ll prefxorA[MAXN], prefxorB[MAXN];
 int a[MAXN], b[MAXN];
-mt19937 rng((int)chrono::steady_clock::now().time_since_epoch().count());
+mt19937_64 rng((int)chrono::steady_clock::now().time_since_epoch().count());
 
 ll uniform(ll l, ll r)
 {

@@ -10,5 +10,5 @@ vector<int> getdivisors(int n) {
         }
     }
 
-    return divisors
+    return divisors;
 }

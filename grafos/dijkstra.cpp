@@ -1,3 +1,5 @@
+//O(N+M logN) Caminho de um para todos. Pesos positivos.
+
 #include <iostream>
 #include <vector>
 #include <queue>

@@ -1,8 +1,3 @@
-#include <iostream>
-#include <vector>
-
-using namespace std;
-
 struct TrieNode
 {
     TrieNode *children[26];

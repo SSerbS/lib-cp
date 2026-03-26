@@ -26,14 +26,13 @@ void solve()
         contador[pos1]++;
         contador[pos2]--;
     }
-    for (int i = 1; i <= contador.size(); i++){
+    for (int i = 1; i < contador.size(); i++){
           psum.push_back(psum[psum.size() - 1] + contador[i]);
     }
     while(q--){
         ll pos; cin >> pos;  
         //Acessamos o valor das queries com o limite superior - 1.
-        cout << prefixsum[(upper_bound(v.begin(), v.end(), pos) - v.begin()) - 1] << "\n";
+        cout << psum[(upper_bound(v.begin(), v.end(), pos) - v.begin()) - 1] << "\n";
 
     }
-    return 0;
 }

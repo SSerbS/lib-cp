@@ -1,16 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <cstring>
-#include <algorithm>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using pll = pair<ll, ll>;
-const int INF = 1e9 + 5;
-const int MAXN = 5e5 + 5;
-#define FOR(a, b) for (int i = a; i < b; i++)
-
 static const ll P1 = 31;
 static const ll P2 = 37;
 static const ll M1 = 1e9 + 7;
@@ -65,20 +52,4 @@ int main()
     power(n);
     precompute_hashes(s, prefixA);
     precompute_hashes(s2, prefixB);
-
-    int i = 0, k = s2.size() - 1;
-    bool ans = false;
-    while (i + m - 1 < n)
-    {
-        if (sub_hasher(i, i + m - 1, prefixA) == sub_hasher(k - m + 1, k, prefixB))
-        {
-            ans = true;
-            break;
-        }
-        i++;
-        k--;
-    }
-
-    cout << (ans ? "Accept" : "Reject");
-    return 0;
 }

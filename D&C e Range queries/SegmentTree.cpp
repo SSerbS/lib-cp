@@ -56,11 +56,11 @@ int bs(ll k, int l = 0, int r = n - 1, int idx = 0) {
     int m = (l + r) / 2;
     
     // Tenta primeiro o filho da esquerda para garantir que seja o "primeiro" índice
-    int res = find_first(k, l, m, 2 * idx + 1);
+    int res = bs(k, l, m, 2 * idx + 1);
     
     // Se não encontrou na esquerda, busca na direita
     if (res == -1) {
-        res = find_first(k, m + 1, r, 2 * idx + 2);
+        res = bs(k, m + 1, r, 2 * idx + 2);
     }
     
     return res;

@@ -9,7 +9,7 @@ int cmp(double x, double y){
 
 const double EPS = 1e-9;
 #define FOR(n) for(int i = 0; i < n; i++)
-#define double ll
+//#define double ll
 int cmp(double x, double y){
     if(abs(x-y) < EPS) return 0;
     if(x < y) return -1;

@@ -8,7 +8,7 @@ os vértices do grafo.
 Complexidade: O(V³)
 */
 
-vvll dist(n+1, vll(n+1));
+vvll d(n+1, vll(n+1));
 
 for (int k = 0; k < n; ++k) {
     for (int i = 0; i < n; ++i) {

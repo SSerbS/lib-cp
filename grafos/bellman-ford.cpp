@@ -1,3 +1,5 @@
+//O(N*M) Caminho de um para todos. Pesos podem ser negativos.
+
 vector<ll> dist(n, INF);
 dist[s] = 0;
 

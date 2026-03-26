@@ -45,24 +45,6 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
     TrieNode *root = new TrieNode();
-    int n, q;
-    cin >> n >> q;
-
-    for (int i = 0; i < n; i++)
-    {
-        string str;
-        cin >> str;
-        insert(root, str);
-    }
-
-    while (q--)
-    {
-        string str;
-        cin >> str;
-        cout << num_prefix(root, str) << "\n";
-    }
-
     return 0;
 }

@@ -2,7 +2,7 @@ const int MAXN = 2e5 + 5; //MAXN <= 1e6
 int a[MAXN], b[MAXN];
 pair<ll, ll> valor[MAXN], prefA[MAXN], prefB[MAXN];
 
-mt19937 rng((int)chrono::steady_clock::now().time_since_epoch().count());
+mt19937_64 rng((int)chrono::steady_clock::now().time_since_epoch().count());
 
 ll uniform(ll l, ll r)
 {

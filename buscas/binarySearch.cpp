@@ -17,7 +17,7 @@ ll bs(vector<int> &arr, ll x) {
 
 bool f(int m){
   //checa se m resolve o problema.
-  //Caso “f” consiga ser resolvida em tempo linear, a complexidade do código se torna O(N×Log(r)).
+  //Caso "f" consiga ser resolvida em tempo linear, a complexidade do codigo se torna O(NLog(r)).
 }
 
 ll bsOnAnswer(){

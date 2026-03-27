@@ -5,7 +5,7 @@ int n, q;
 struct Node
 {
     ll sum = 0, pref = 0, suf = 0, best = 0;
-    ll max_val = -INF; // Campo para BS genérica por valor individual
+    ll max_val = -INF; // Campo para BS generica por valor individual
 };
 
 Node segtree[4 * MAXN], a[MAXN];
@@ -47,18 +47,18 @@ Node query(int L, int R, int l = 0, int r = n - 1, int idx = 0)
 }
 
 int bs(ll k, int l = 0, int r = n - 1, int idx = 0) {
-    // CONDIÇÃO DE PARADA: Se a propriedade do nó não satisfaz o critério, não desce
-    // Para "primeiro elemento >= k", checamos se o máximo no intervalo é >= k
+    // CONDICAO DE PARADA: Se a propriedade do no nao satisfaz o criterio, nao desce
+    // Para "primeiro elemento >= k", checamos se o maximo no intervalo eh >= k
     if (segtree[idx].max_val < k) return -1;
 
     if (l == r) return l; // Encontramos a folha
 
     int m = (l + r) / 2;
     
-    // Tenta primeiro o filho da esquerda para garantir que seja o "primeiro" índice
+    // Tenta primeiro o filho da esquerda para garantir que seja o "primeiro" indice
     int res = bs(k, l, m, 2 * idx + 1);
     
-    // Se não encontrou na esquerda, busca na direita
+    // Se nao encontrou na esquerda, busca na direita
     if (res == -1) {
         res = bs(k, m + 1, r, 2 * idx + 2);
     }

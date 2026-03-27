@@ -1,7 +1,7 @@
-/*Time Complexity: O(T⋅k⋅logn)
-T: é o número de casos de teste.
-k: é o número de bases primas utilizadas no vetor bases (neste caso, k=12).
-n: é o valor que está sendo testado.
+/*Time Complexity: O(Tklogn)
+T: e o numero de casos de teste.
+k: e o numero de bases primas utilizadas no vetor bases (neste caso, k=12).
+n: e o valor que esta sendo testado.
 */
 vector<ll> bases = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37};
 

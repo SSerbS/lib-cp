@@ -1,9 +1,9 @@
-// Função unimodal multi-dimensional (ex: soma de distâncias para N pontos)
+// Funcao unimodal multi-dimensional (ex: soma de distancias para N pontos)
 double f_2d(double x, double y) {
     return x*x + y*y; 
 }
 
-// 1. Busca interna: recebe um X fixo e faz busca ternária no Y
+// 1. Busca interna: recebe um X fixo e faz busca ternaria no Y
 double ternary_search_Y(double x, double ly, double ry) {
     for (int i = 0; i < 200; i++) {
         double m1 = ly + (ry - ly) / 3.0;
@@ -15,16 +15,16 @@ double ternary_search_Y(double x, double ly, double ry) {
             ry = m2;
         }
     }
-    return f_2d(x, ly); // Retorna o valor mínimo com aquele X fixo
+    return f_2d(x, ly); // Retorna o valor minimo com aquele X fixo
 }
 
-// 2. Busca externa: Faz a busca ternária em X
+// 2. Busca externa: Faz a busca ternaria em X
 double ternary_search_X(double lx, double rx, double ly, double ry) {
     for (int i = 0; i < 200; i++) {
         double m1 = lx + (rx - lx) / 3.0;
         double m2 = rx - (rx - lx) / 3.0;
         
-        // A função objetivo da busca externa avalia o resultado ótimo da interna
+        // A funcao objetivo da busca externa avalia o resultado otimo da interna
         if (ternary_search_Y(m1, ly, ry) > ternary_search_Y(m2, ly, ry)) {
             lx = m1;
         } else {
@@ -33,6 +33,6 @@ double ternary_search_X(double lx, double rx, double ly, double ry) {
     }
     
     // Retorna a melhor resposta global. 
-    // Se o problema pedir o ponto (X, Y), você precisará recuperar o 'ly' que gera esse mínimo.
+    // Se o problema pedir o ponto (X, Y), voce precisara recuperar o 'ly' que gera esse minimo.
     return ternary_search_Y(lx, ly, ry); 
 }

@@ -15,10 +15,10 @@ long long ternary_search_int(long long l, long long r) {
         }
     }
     
-    // O x que gera o mínimo está entre l e r. Avaliamos todos.
+    // O x que gera o minimo esta entre l e r. Avaliamos todos.
     long long ans = f_int(l);
     for (long long i = l + 1; i <= r; i++) {
-        ans = min(ans, f_int(i)); // Se quiser máximo, troque para max()
+        ans = min(ans, f_int(i)); // Se quiser maximo, troque para max()
     }
     return ans;
 }

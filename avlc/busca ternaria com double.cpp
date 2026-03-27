@@ -1,14 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Defina sua função unimodal (ex: distância, parábola, etc)
+// Defina sua funcao unimodal (ex: distancia, parabola, etc)
 double f(double x) {
     // Exemplo: f(x) = x^2
     return x * x; 
 }
 
 double ternary_search(double l, double r) {
-    // 200 iterações é extremamente seguro para variáveis double
+    // 200 iteracoes e extremamente seguro para variaveis double
     for (int i = 0; i < 200; i++) {
         double m1 = l + (r - l) / 3.0;
         double m2 = r - (r - l) / 3.0;
@@ -20,7 +20,7 @@ double ternary_search(double l, double r) {
             r = m2;
         }
     }
-    // Retorna o valor MÍNIMO da função. 
-    // Caso o problema peça o "x" que gera esse mínimo, retorne 'l'.
+    // Retorna o valor MINIMO da funcao. 
+    // Caso o problema peca o "x" que gera esse minimo, retorne 'l'.
     return f(l); 
 }

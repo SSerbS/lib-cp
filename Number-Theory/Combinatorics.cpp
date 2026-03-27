@@ -62,8 +62,15 @@ int main()
     cin.tie(NULL);
 
     precompute();
-    ll n,r; n=5;r=2;
-    cout << binomial(n,r) << "\n";
+    ll n, m; cin >> n >> m;
+    /*
+        Stars and Bars:
+        n-1 barras para criar n espaços;
+        O número total de símbolos será m + (n - 1;
+        (m + n - 1)!/(m!(n - 1)!);
+    */
+    
+    cout << binomial(n+m-1, n-1) << "\n";
 
     return 0;
 }
